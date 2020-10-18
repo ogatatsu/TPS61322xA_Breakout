@@ -1,0 +1,3 @@
+[submodule "oreore-kicad-library"]
+	path = oreore-kicad-library
+	url = https://github.com/ogatatsu/oreore-kicad-library.git

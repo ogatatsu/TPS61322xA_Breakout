@@ -1,0 +1,170 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:L L1
+U 1 1 5EBCD990
+P 4800 2700
+F 0 "L1" V 4990 2700 50  0000 C CNN
+F 1 "4.7uH" V 4899 2700 50  0000 C CNN
+F 2 "Inductor_SMD:L_1210_3225Metric" H 4800 2700 50  0001 C CNN
+F 3 "~" H 4800 2700 50  0001 C CNN
+	1    4800 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5EBCE6AC
+P 5900 3150
+F 0 "C2" H 6015 3196 50  0000 L CNN
+F 1 "22uF" H 6015 3105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5938 3000 50  0001 C CNN
+F 3 "~" H 5900 3150 50  0001 C CNN
+	1    5900 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5EBD2499
+P 4550 2950
+F 0 "C1" H 4665 2996 50  0000 L CNN
+F 1 "4.7uF" H 4665 2905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4588 2800 50  0001 C CNN
+F 3 "~" H 4550 2950 50  0001 C CNN
+	1    4550 2950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4550 3350 3    50   Input ~ 0
+GND
+Text GLabel 5900 3350 3    50   Input ~ 0
+GND
+Wire Wire Line
+	4550 3350 4550 3100
+Wire Wire Line
+	4550 2800 4550 2700
+Wire Wire Line
+	4550 2700 4650 2700
+Text GLabel 4350 2700 0    50   Input ~ 0
+VIN
+Text GLabel 6150 3000 2    50   Input ~ 0
+VOUT
+Wire Wire Line
+	4350 2700 4550 2700
+Connection ~ 4550 2700
+$Comp
+L Texas_TPS61322xA:TPS61322xA U1
+U 1 1 5EBD6998
+P 5450 2850
+F 0 "U1" H 5450 3267 50  0000 C CNN
+F 1 "TPS61322xA" H 5450 3176 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5_HandSoldering" H 5400 2750 50  0001 C CNN
+F 3 "" H 5400 2750 50  0001 C CNN
+	1    5450 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2700 5000 2700
+Text GLabel 5000 3350 3    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 5EBDB843
+P 7150 3250
+F 0 "J1" V 7022 3062 50  0000 R CNN
+F 1 "Conn_01x03" V 7113 3062 50  0000 R CNN
+F 2 "footprints:Connector_2.54mm_03" H 7150 3250 50  0001 C CNN
+F 3 "~" H 7150 3250 50  0001 C CNN
+	1    7150 3250
+	0    -1   1    0   
+$EndComp
+Text GLabel 7050 2950 1    50   Input ~ 0
+VIN
+Text GLabel 7150 2950 1    50   Input ~ 0
+GND
+Text GLabel 7250 2950 1    50   Input ~ 0
+VOUT
+Wire Wire Line
+	7050 3050 7050 2950
+Wire Wire Line
+	7150 3050 7150 2950
+Wire Wire Line
+	7250 3050 7250 2950
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5EBDD50B
+P 3250 3000
+F 0 "#FLG0101" H 3250 3075 50  0001 C CNN
+F 1 "PWR_FLAG" H 3250 3173 50  0000 C CNN
+F 2 "" H 3250 3000 50  0001 C CNN
+F 3 "~" H 3250 3000 50  0001 C CNN
+	1    3250 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5EBDD94C
+P 3750 3000
+F 0 "#FLG0102" H 3750 3075 50  0001 C CNN
+F 1 "PWR_FLAG" H 3750 3173 50  0000 C CNN
+F 2 "" H 3750 3000 50  0001 C CNN
+F 3 "~" H 3750 3000 50  0001 C CNN
+	1    3750 3000
+	-1   0    0    1   
+$EndComp
+Text GLabel 3250 2850 1    50   Input ~ 0
+VIN
+Text GLabel 3750 2850 1    50   Input ~ 0
+GND
+Wire Wire Line
+	3250 2850 3250 3000
+Wire Wire Line
+	3750 2850 3750 3000
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5EBDE414
+P 5000 2450
+F 0 "#FLG0103" H 5000 2525 50  0001 C CNN
+F 1 "PWR_FLAG" H 5000 2623 50  0000 C CNN
+F 2 "" H 5000 2450 50  0001 C CNN
+F 3 "~" H 5000 2450 50  0001 C CNN
+	1    5000 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 2450 5000 2700
+Connection ~ 5000 2700
+Wire Wire Line
+	5000 2700 5100 2700
+Wire Wire Line
+	5100 2850 5000 2850
+Wire Wire Line
+	5000 2850 5000 3000
+Wire Wire Line
+	5100 3000 5000 3000
+Connection ~ 5000 3000
+Wire Wire Line
+	5000 3000 5000 3350
+Wire Wire Line
+	5800 2700 5900 2700
+Wire Wire Line
+	5900 2700 5900 3000
+Wire Wire Line
+	5800 3000 5900 3000
+Connection ~ 5900 3000
+Wire Wire Line
+	5900 3000 6150 3000
+Wire Wire Line
+	5900 3300 5900 3350
+$EndSCHEMATC
